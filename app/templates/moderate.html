@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% import "include/_macros.html" as macros %}
+
+{% block content %}
+{{ super() }} 
+    <div class="page-header">
+        <h1>Manage Comment</h1>
+    </div>
+    {% set moderate = True %}
+    {% include "include/_comment.html" %}
+    <div class="pagination">
+        {{ macros.pagination_widget(pagination, 'main.moderate') }}
+    </div>
+{% endblock %}

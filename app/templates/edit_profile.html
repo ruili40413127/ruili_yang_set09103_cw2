@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}Edit you personal information{% endblock %}
+
+{% block content %}
+{{ super() }} 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 well ">
+            <div class="page-header">
+                <h1>Edit you personal information</h1>
+            </div>
+            
+                <form method="post">
+                    {{ wtf.quick_form(form) }}
+                </form>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+{% import 'bootstrap/wtf.html' as wtf %} 
+{% block title %}Register{% endblock %}
+{% block head %} {{ super() }}
+<style type="text/css">
+    #registerlength {
+        max-width: 600px;
+    }
+</style>
+{% endblock %} 
+{% block content %}
+{{ super() }} 
+<div class="page-header">
+    <div class="container">
+        <h1>Register</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+    <form method="post">
+        <div class="well bs-component">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </form>
+    </div>
+</div>
+
+{% endblock %}

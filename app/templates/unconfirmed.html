@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Confirm your account{% endblock %}
+{% block content %}
+{{ super() }} 
+<div class="page-header">
+    <div class="container">
+        <h1>wait fot confirm</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+    <div class="well bs-component">
+        <h1>
+            Hello,{{ current_user.username }}
+        </h1>
+        <h3>
+            You do not confirm you account up to now
+        </h3>
+        <p>
+            You should confirm you account in your email, before you get look through the website
+        </p>
+        <p>
+            Do you want get it again?
+            <a href="{{ url_for('auth.resend_email') }}">请点击这里</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}
